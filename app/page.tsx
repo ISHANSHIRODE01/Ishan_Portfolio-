@@ -5,7 +5,7 @@ import ErrorBoundary from "@/components/ErrorBoundary";
 import PageLoader from "@/components/PageLoader";
 
 import MobileNav from "@/components/MobileNav";
-import ParticleBackground from "@/components/ParticleBackground";
+
 import ScrollAnimatedSection from "@/components/ScrollAnimatedSection";
 
 import Hero from "@/components/Hero";
@@ -24,7 +24,7 @@ const Home = () => {
     <ErrorBoundary>
       <PageLoader>
         <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5 transition-colors duration-300">
-          <ParticleBackground />
+
 
           <MobileNav />
           <div className="max-w-7xl w-full relative z-10">
