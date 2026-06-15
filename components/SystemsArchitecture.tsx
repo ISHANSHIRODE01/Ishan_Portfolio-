@@ -1,42 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
-
-const nodes = {
-  rag: [
-    { id: "1", label: "Unstructured Data (PDF/Text)", type: "input" },
-    { id: "2", label: "Semantic Chunker", type: "process" },
-    { id: "3", label: "Embedding Model", type: "model" },
-    { id: "4", label: "FAISS Vector DB", type: "db" },
-    { id: "5", label: "User Query", type: "input" },
-    { id: "6", label: "Retriever", type: "process" },
-    { id: "7", label: "LLM Generation", type: "model" },
-    { id: "8", label: "Final Output", type: "output" }
-  ],
-  mlops: [
-    { id: "1", label: "Live Data Ingestion", type: "input" },
-    { id: "2", label: "FastAPI Inference", type: "process" },
-    { id: "3", label: "Prometheus Metrics", type: "db" },
-    { id: "4", label: "Drift Detector (KS-Test)", type: "model" },
-    { id: "5", label: "Alert Trigger", type: "process" },
-    { id: "6", label: "Airflow Retraining", type: "process" }
-  ],
-  council: [
-    { id: "1", label: "User Prompt", type: "input" },
-    { id: "2", label: "LangChain Router", type: "process" },
-    { id: "3", label: "GPT-4 Node", type: "model" },
-    { id: "4", label: "Claude Node", type: "model" },
-    { id: "5", label: "Llama-3 Node", type: "model" },
-    { id: "6", label: "Evaluator/Consensus", type: "process" },
-    { id: "7", label: "Verified Answer", type: "output" }
-  ],
-  fastapi: [
-    { id: "1", label: "Client Request", type: "input" },
-    { id: "2", label: "Load Balancer", type: "process" },
-    { id: "3", label: "FastAPI Async Worker", type: "process" },
-    { id: "4", label: "Redis Cache", type: "db" },
-    { id: "5", label: "PyTorch Inference", type: "model" }
-  ]
-};
 
 const NodeCard = ({ label, type, tooltip }: { label: string; type: string; tooltip?: string }) => {
   const getColors = () => {

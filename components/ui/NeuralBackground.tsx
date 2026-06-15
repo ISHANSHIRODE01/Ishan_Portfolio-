@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useMemo, useState, useEffect } from "react";
+import React, { useRef, useMemo, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
 import * as THREE from "three";
@@ -52,7 +52,7 @@ function NeuralNetwork() {
 
 
 
-  useFrame((state) => {
+  useFrame(() => {
     if (!particlesRef.current || !linesGeometryRef.current) return;
 
     const positions = particlesRef.current.geometry.attributes.position.array as Float32Array;
@@ -64,9 +64,9 @@ function NeuralNetwork() {
     // ... (rest of update loop unchanged)
     // Update particle positions
     for (let i = 0; i < count; i++) {
-      let ix = i * 3;
-      let iy = i * 3 + 1;
-      let iz = i * 3 + 2;
+      const ix = i * 3;
+      const iy = i * 3 + 1;
+      const iz = i * 3 + 2;
 
       // Apply velocity
       positions[ix] += velocities[i].x;

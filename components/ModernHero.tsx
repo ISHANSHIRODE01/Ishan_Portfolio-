@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { NeonButton } from "./ui/NeonButton";
-import { Spotlight } from "./ui/Spotlight";
 import Image from "next/image";
 
 const ModernHero = () => {

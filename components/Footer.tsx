@@ -20,7 +20,7 @@ const Footer = () => {
             href="https://mail.google.com/mail/?view=cm&fs=1&to=ishanshirode7679@gmail.com&su=AI%20Engineer%20Opportunity"
             external={true}
           >
-            Let's get in touch <FaLocationArrow className="ml-2" />
+            Let&apos;s get in touch <FaLocationArrow className="ml-2" />
           </NeonButton>
           <a
             href="https://wa.me/919307767804"
@@ -34,7 +34,7 @@ const Footer = () => {
       </div>
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center max-w-7xl mx-auto w-full px-5 relative z-10">
         <p className="md:text-base text-sm md:font-normal font-light text-center md:text-left">
-          Copyright © 2025 Ishan Shirode
+          Copyright © 2026 Ishan Shirode
         </p>
 
         <div className="flex items-center md:gap-4 gap-6 mt-4 md:mt-0">
