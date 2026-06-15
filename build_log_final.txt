@@ -1,0 +1,37 @@
+
+> portfolio@0.1.0 build
+> next build
+
+  ▲ Next.js 14.2.35
+  - Experiments (use with caution):
+    · optimizeCss
+
+   Creating an optimized production build ...
+Failed to compile.
+
+./node_modules/three-globe/dist/three-globe.mjs
+Module not found: Package path ./webgpu is not exported from package F:\Ishan-s-Portfolio-main\Ishan-s-Portfolio-main\node_modules\three (see exports field in F:\Ishan-s-Portfolio-main\Ishan-s-Portfolio-main\node_modules\three\package.json)
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./components/ui/Globe.tsx
+./components/ui/GridGlobe.tsx
+./components/ui/BentoGrid.tsx
+./components/Grid.tsx
+./app/page.tsx
+
+./node_modules/three-globe/dist/three-globe.mjs
+Module not found: Package path ./tsl is not exported from package F:\Ishan-s-Portfolio-main\Ishan-s-Portfolio-main\node_modules\three (see exports field in F:\Ishan-s-Portfolio-main\Ishan-s-Portfolio-main\node_modules\three\package.json)
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./components/ui/Globe.tsx
+./components/ui/GridGlobe.tsx
+./components/ui/BentoGrid.tsx
+./components/Grid.tsx
+./app/page.tsx
+
+
+> Build failed because of webpack errors

@@ -7,7 +7,7 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
   experimental: {
-    optimizeCss: true,
+    optimizeCss: false,
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
@@ -32,10 +32,6 @@ const nextConfig = {
           {
             key: 'Referrer-Policy',
             value: 'origin-when-cross-origin'
-          },
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable'
           }
         ]
       },

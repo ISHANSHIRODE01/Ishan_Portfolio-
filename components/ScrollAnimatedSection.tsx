@@ -1,7 +1,8 @@
 "use client";
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { motion } from 'framer-motion';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 
 interface ScrollAnimatedSectionProps {
   children: React.ReactNode;
@@ -10,7 +11,10 @@ interface ScrollAnimatedSectionProps {
 }
 
 const ScrollAnimatedSection = ({ children, className = "", delay = 0 }: ScrollAnimatedSectionProps) => {
-  const { ref, controls } = useScrollAnimation();
+  const { ref, isIntersecting } = useIntersectionObserver({
+    threshold: 0.1,
+    rootMargin: '-50px'
+  });
 
   const variants = {
     hidden: { opacity: 0, y: 50 },
@@ -27,9 +31,9 @@ const ScrollAnimatedSection = ({ children, className = "", delay = 0 }: ScrollAn
 
   return (
     <motion.div
-      ref={ref}
+      ref={ref as any}
       initial="hidden"
-      animate={controls}
+      animate={isIntersecting ? "visible" : "hidden"}
       variants={variants}
       className={className}
     >

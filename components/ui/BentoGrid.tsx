@@ -1,4 +1,5 @@
 import { useState } from "react";
+// import { IoCopyOutline } from "react-icons/io5";
 import { IoCopyOutline } from "react-icons/io5";
 
 // Also install this npm i --save-dev @types/react-lottie
@@ -8,9 +9,12 @@ import { cn } from "@/lib/utils";
 
 
 import { BackgroundGradientAnimation } from "./GradientBg";
-import GridGlobe from "./GridGlobe";
+// import GridGlobe from "./GridGlobe";
+import dynamic from "next/dynamic";
+const GridGlobe = dynamic(() => import("./GridGlobe"), { ssr: false });
 import animationData from "@/data/confetti.json";
-import MagicButton from "../MagicButton";
+import { NeonButton } from "./NeonButton";
+import SafeImage from "../SafeImage";
 
 export const BentoGrid = ({
   className,
@@ -75,26 +79,19 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        // remove p-4 rounded-3xl dark:bg-black dark:border-white/[0.2] bg-white  border border-transparent, add border border-white/[0.1] overflow-hidden relative
-        "row-span-1 relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
+        "row-span-1 relative overflow-hidden rounded-2xl border border-white/10 bg-black-100 group/bento transition-colors hover:border-white/20 hover:bg-white/[0.02] justify-between flex flex-col space-y-4",
         className
       )}
-      style={{
-        //   add these two
-        //   you can generate the color from here https://cssgradient.io/
-        background: "rgb(4,7,29)",
-        backgroundColor:
-          "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
-      }}
     >
       {/* add img divs */}
       <div className={`${id === 6 && "flex justify-center"} h-full`}>
         <div className="w-full h-full absolute">
           {img && (
-            <img
+            <SafeImage
               src={img}
               alt={img}
               className={cn(imgClassName, "object-cover object-center ")}
+              fill
             />
           )}
         </div>
@@ -103,19 +100,17 @@ export const BentoGridItem = ({
             } `}
         >
           {spareImg && (
-            <img
+            <SafeImage
               src={spareImg}
               alt={spareImg}
               //   width={220}
               className="object-cover object-center w-full h-full"
+              fill
             />
           )}
         </div>
         {id === 6 && (
-          // add background animation , remove the p tag
-          <BackgroundGradientAnimation>
-            <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
-          </BackgroundGradientAnimation>
+          <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
         )}
 
         <div
@@ -183,13 +178,12 @@ export const BentoGridItem = ({
                 <Lottie options={defaultOptions} height={200} width={400} />
               </div>
 
-              <MagicButton
-                title={copied ? "Email is Copied!" : "Copy my email address"}
-                icon={<IoCopyOutline />}
-                position="left"
-                handleClick={handleCopy}
-                otherClasses="!bg-[#161A31]"
-              />
+              <div onClick={handleCopy}>
+                <NeonButton variant="secondary" className="text-xs">
+                  <IoCopyOutline className="mr-2" />
+                  {copied ? "Email Copied!" : "Copy Email"}
+                </NeonButton>
+              </div>
             </div>
           )}
         </div>

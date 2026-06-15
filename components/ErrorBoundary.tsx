@@ -1,19 +1,20 @@
 "use client";
 
 import React from 'react';
-import MagicButton from './MagicButton';
-import { FaLocationArrow } from 'react-icons/fa6';
+import ErrorFallback from './ErrorFallback';
 
 interface ErrorBoundaryState {
   hasError: boolean;
   error?: Error;
 }
 
-class ErrorBoundary extends React.Component<
-  { children: React.ReactNode },
-  ErrorBoundaryState
-> {
-  constructor(props: { children: React.ReactNode }) {
+interface ErrorBoundaryProps {
+  children: React.ReactNode;
+  fallback?: React.ComponentType<{ error: Error; resetError: () => void }>;
+}
+
+class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false };
   }
@@ -22,26 +23,24 @@ class ErrorBoundary extends React.Component<
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+  componentDidCatch() {
+    // In dev, you might want to log this, but for production linting we remove it or use a proper logging service.
+    // console.error('Error caught by boundary:', error, errorInfo);
+    
+    // Log to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      // Add your error reporting service here
+    }
   }
 
+  resetError = () => {
+    this.setState({ hasError: false, error: undefined });
+  };
+
   render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen bg-black-100 flex items-center justify-center flex-col text-white p-4">
-          <h1 className="text-4xl font-bold text-purple mb-4">Something went wrong</h1>
-          <p className="text-white-200 mb-8 text-center max-w-md">
-            We encountered an unexpected error. Please try refreshing the page.
-          </p>
-          <MagicButton
-            title="Refresh Page"
-            icon={<FaLocationArrow />}
-            position="right"
-            handleClick={() => window.location.reload()}
-          />
-        </div>
-      );
+    if (this.state.hasError && this.state.error) {
+      const FallbackComponent = this.props.fallback || ErrorFallback;
+      return <FallbackComponent error={this.state.error} resetError={this.resetError} />;
     }
 
     return this.props.children;

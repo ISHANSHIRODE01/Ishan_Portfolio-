@@ -24,6 +24,56 @@ export interface Project {
   img: string;
   iconLists: string[];
   link: string;
+  metrics?: {
+    label: string;
+    value: string;
+  }[];
+  githubLink?: string;
+  liveLink?: string;
+  architectureLink?: string;
+  caseStudy?: {
+    overview: {
+      summary: string;
+      problem: string;
+      businessContext: string;
+      technicalContext: string;
+    };
+    architecture: {
+      visualPipeline: string;
+      componentBreakdown: string[];
+      dataFlow: string[];
+      infrastructure: {
+        models: string;
+        databases: string;
+        caching: string;
+        apis: string;
+      };
+    };
+    challenges: string[];
+    technicalDecisions: {
+      decision: string;
+      rationale: string;
+    }[];
+    implementation: {
+      backend: string;
+      frontend: string;
+      infrastructure: string;
+      aiPipeline: string;
+    };
+    results: {
+      metric: string;
+      value: string;
+      context: string;
+    }[];
+    lessonsLearned: string[];
+    futureImprovements: string[];
+    recruiterTakeaways: {
+      aiEngineer: string;
+      mlEngineer: string;
+      startupFounder: string;
+      softwareEngineer: string;
+    };
+  };
 }
 
 export interface Testimonial {
@@ -45,11 +95,12 @@ export interface WorkExperience {
   desc: string;
   className: string;
   thumbnail: string;
-  link?: string;
+  link: string;
 }
 
 export interface SocialMedia {
   id: number;
   img: string;
   link: string;
+  name: string;
 }

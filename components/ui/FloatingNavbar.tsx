@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable */
 import React, { useState } from "react";
 import {
   motion,
@@ -85,11 +86,27 @@ export const FloatingNav = ({
             <span className=" text-sm !cursor-pointer">{navItem.name}</span>
           </Link>
         ))}
-        {/* remove this login btn */}
-        {/* <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
-          <span>Login</span>
-          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
-        </button> */}
+        <div className="flex items-center gap-2 shrink-0">
+          <a 
+            href="https://drive.google.com/file/d/1QUz_lPNTzgMJFgmoKDnjvVY1DLW0n0BR/view?usp=sharing" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border text-sm font-medium relative border-white/20 bg-black-200 text-slate-300 px-4 py-2 rounded-full hover:text-white transition-all hidden md:block"
+            aria-label="Download Resume"
+          >
+            Resume
+          </a>
+          <a 
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=ishanshirode7679@gmail.com&su=AI%20Engineer%20Opportunity" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border text-sm font-medium relative border-white/20 bg-neon-blue/10 text-white px-4 py-2 rounded-full hover:bg-neon-blue/20 focus:outline-none focus:ring-2 focus:ring-neon-blue focus:ring-offset-2 focus:ring-offset-black transition-all flex items-center"
+            aria-label="Email Ishan regarding an AI Engineer Opportunity"
+          >
+            <span>Hire Me</span>
+            <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-neon-blue to-transparent h-px" />
+          </a>
+        </div>
       </motion.div>
     </AnimatePresence>
   );

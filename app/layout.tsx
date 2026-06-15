@@ -7,14 +7,14 @@ import { ThemeProvider } from "./provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ishan Shirode - AI/ML Engineer Portfolio",
-  description: "AI & Machine Learning Engineer specializing in Generative AI, NLP, and LLMs. Building intelligent systems that understand, reason, and create.",
-  keywords: "AI, Machine Learning, NLP, Generative AI, LLMs, Portfolio, Ishan Shirode, Computer Vision, Deep Learning",
+  title: "Ishan Shirode | AI Systems Engineer",
+  description: "AI Systems Engineer architecting scalable ML backends, high-speed RAG pipelines, and production inference APIs.",
+  keywords: "AI Systems Engineer, MLOps, Machine Learning, FastAPI, Docker, PyTorch, RAG, LangChain, Portfolio",
   authors: [{ name: "Ishan Shirode" }],
   creator: "Ishan Shirode",
   openGraph: {
-    title: "Ishan Shirode - AI/ML Engineer",
-    description: "Building intelligent systems that understand, reason, and create",
+    title: "Ishan Shirode | AI Systems Engineer",
+    description: "Architecting scalable ML backends and RAG pipelines",
     url: "https://ishanshirode.dev",
     siteName: "Ishan Shirode Portfolio",
     locale: "en_US",
@@ -56,8 +56,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               "name": "Ishan Shirode",
-              "jobTitle": "AI & Machine Learning Engineer",
-              "description": "AI & Machine Learning Engineer specializing in Generative AI, NLP, and LLMs",
+              "jobTitle": "AI Systems Engineer",
+              "description": "AI Systems Engineer architecting scalable ML backends and RAG pipelines",
               "url": "https://ishanshirode.dev",
               "sameAs": [
                 "https://github.com/ISHANSHIRODE01",

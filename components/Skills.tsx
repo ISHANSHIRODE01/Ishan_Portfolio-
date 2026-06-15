@@ -1,29 +1,26 @@
 import React from "react";
+import { SkillBadge } from "./ui/SkillBadge";
 
 const skillsData = [
     {
-        category: "Machine Learning & AI",
-        skills: ["Transformers", "LLMs", "YOLOv8", "OpenCV", "OpenAI Whisper", "Scikit-Learn", "RAG Architectures"],
+        category: "Artificial Intelligence",
+        skills: ["Machine Learning", "Natural Language Processing (NLP)", "Large Language Models (LLMs)", "Generative AI", "Transformers", "RAG Architectures", "Prompt Engineering"],
     },
     {
-        category: "Deep Learning & GenAI",
-        skills: ["TensorFlow", "HuggingFace", "LangChain", "MarianMT", "Prompt Engineering"],
+        category: "Expertise & Tools",
+        skills: ["Computer Vision (YOLOv8)", "OpenCV", "OpenAI Whisper", "HuggingFace", "LangChain", "TensorFlow", "Scikit-Learn"],
     },
     {
-        category: "Data Stack",
-        skills: ["Python", "SQL", "C++", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Excel"],
+        category: "MLOps & Engineering",
+        skills: ["FastAPI", "Docker", "AWS Cloud (EC2/S3)", "MLOps Pipelines", "GitHub Actions", "Linux", "Postman"],
     },
     {
-        category: "MLOps & Deployment",
-        skills: ["FastAPI", "Streamlit", "Docker (basic)", "AWS EC2", "AWS S3", "GitHub Actions"],
+        category: "Data & Programming",
+        skills: ["Python", "C++", "SQL", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Business Analytics"],
     },
     {
-        category: "Developer Tools",
-        skills: ["Git & GitHub", "Linux", "VS Code", "Jupyter Notebook", "Postman"],
-    },
-    {
-        category: "Soft Skills",
-        skills: ["Problem Solving", "Communication", "Leadership", "Collaboration"],
+        category: "Professional Skills",
+        skills: ["Problem Solving", "System Design", "Technical Leadership", "Agile Methodology"],
     },
 ];
 
@@ -44,12 +41,7 @@ const Skills = () => {
                         </h2>
                         <div className="flex flex-wrap gap-2 justify-center">
                             {section.skills.map((skill, skillIdx) => (
-                                <span
-                                    key={skillIdx}
-                                    className="px-3 py-1 bg-[#10132E] rounded-full text-white text-sm border border-white/[0.1]"
-                                >
-                                    {skill}
-                                </span>
+                                <SkillBadge key={skillIdx} name={skill} />
                             ))}
                         </div>
                     </div>

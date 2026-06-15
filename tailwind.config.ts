@@ -81,11 +81,23 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        matrix: {
+          100: "#00ff41",
+        },
+        neon: {
+          blue: "#00f3ff",
+          purple: "#bc13fe",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      boxShadow: {
+        'neon-blue': '0 4px 20px rgba(59, 130, 246, 0.15), 0 0 8px rgba(59, 130, 246, 0.2)',
+        'neon-purple': '0 4px 20px rgba(147, 51, 234, 0.15), 0 0 8px rgba(147, 51, 234, 0.2)',
+        'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
       },
       transitionProperty: {
         'theme': 'background-color, border-color, color, fill, stroke',

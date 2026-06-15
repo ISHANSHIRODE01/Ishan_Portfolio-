@@ -9,18 +9,20 @@ const Leadership = () => {
     return (
         <div className="py-20 w-full" id="leadership">
             <h1 className="heading mb-10">
-                Leadership <span className="text-purple">Roles</span>
+                Leadership & <span className="text-neon-purple">Activities</span>
             </h1>
-            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-16 max-w-7xl mx-auto px-10">
+            <div className="flex flex-wrap items-center justify-center gap-4 max-w-4xl mx-auto px-5">
                 {leadership.map((item, idx) => (
                     <div
                         key={idx}
-                        className="flex flex-col items-center justify-center bg-black-200 border border-white/[0.1] rounded-2xl p-8 w-full md:w-80 hover:scale-105 transition duration-200"
+                        className="flex items-center gap-3 bg-black-200 border border-white/10 rounded-full px-6 py-3 hover:border-neon-purple/50 transition duration-200 shadow-glass"
                     >
-                        <h2 className="text-2xl font-bold text-purple text-center">
+                        <span className="w-2 h-2 rounded-full bg-neon-purple" />
+                        <h2 className="text-sm md:text-base font-bold text-white">
                             {item.role}
                         </h2>
-                        <p className="mt-2 text-white-100 text-lg text-center">
+                        <span className="text-slate-500 hidden sm:block">|</span>
+                        <p className="text-slate-400 text-sm md:text-base">
                             {item.org}
                         </p>
                     </div>
