@@ -59,7 +59,7 @@ export const FloatingNav = ({
           duration: 0.2,
         }}
         className={cn(
-          "flex max-w-fit md:min-w-[70vw] lg:min-w-fit fixed z-[5000] top-10 inset-x-0 mx-auto px-10 py-5 rounded-lg border border-black/.1 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] items-center justify-center space-x-4",
+          "flex max-w-fit md:min-w-[70vw] lg:min-w-fit fixed z-[5000] top-4 md:top-10 inset-x-0 mx-auto px-4 py-3 md:px-10 md:py-5 rounded-xl md:rounded-lg border border-black/.1 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] items-center justify-center space-x-2 md:space-x-4",
           className
         )}
         role="navigation"
@@ -83,7 +83,7 @@ export const FloatingNav = ({
             <span className="block sm:hidden">{navItem.icon}</span>
             {/* add !cursor-pointer */}
             {/* remove hidden sm:block for the mobile responsive */}
-            <span className=" text-sm !cursor-pointer">{navItem.name}</span>
+            <span className="text-xs md:text-sm !cursor-pointer">{navItem.name}</span>
           </Link>
         ))}
         <div className="flex items-center gap-2 shrink-0">
@@ -100,7 +100,7 @@ export const FloatingNav = ({
             href="https://mail.google.com/mail/?view=cm&fs=1&to=ishanshirode7679@gmail.com&su=AI%20Engineer%20Opportunity" 
             target="_blank"
             rel="noopener noreferrer"
-            className="border text-sm font-medium relative border-white/20 bg-neon-blue/10 text-white px-4 py-2 rounded-full hover:bg-neon-blue/20 focus:outline-none focus:ring-2 focus:ring-neon-blue focus:ring-offset-2 focus:ring-offset-black transition-all flex items-center"
+            className="border text-xs md:text-sm font-medium relative border-white/20 bg-neon-blue/10 text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full hover:bg-neon-blue/20 focus:outline-none focus:ring-2 focus:ring-neon-blue focus:ring-offset-2 focus:ring-offset-black transition-all flex items-center"
             aria-label="Email Ishan regarding an AI Engineer Opportunity"
           >
             <span>Hire Me</span>

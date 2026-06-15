@@ -31,15 +31,15 @@ const ModernHero = () => {
             </motion.div>
 
             {/* Main Heading */}
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight">
               Ishan Shirode <br className="hidden md:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-blue via-white to-neon-purple">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-blue via-white to-neon-purple block mt-2 md:mt-0 md:inline">
                 Production AI Engineer
               </span>
             </h1>
 
             {/* Subheading */}
-            <p className="text-lg md:text-xl text-slate-400 mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            <p className="text-base sm:text-lg md:text-xl text-slate-400 mb-10 leading-relaxed max-w-2xl mx-auto lg:mx-0">
               Bridging ML research with robust backend engineering. I architect and deploy scalable AI systems—from <span className="text-neon-blue font-medium">high-speed RAG pipelines</span> to <span className="text-neon-purple font-medium">automated MLOps architectures</span>.
             </p>
 
@@ -82,7 +82,7 @@ const ModernHero = () => {
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 w-full border-t border-white/[0.1] pt-8"
+          className="mt-12 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 w-full border-t border-white/[0.1] pt-8"
         >
           {[
             { label: "AI Systems Built", value: "5+" },
@@ -91,8 +91,8 @@ const ModernHero = () => {
             { label: "Graduate", value: "2026" },
           ].map((metric, idx) => (
             <div key={idx} className="flex flex-col items-center">
-              <span className="text-3xl font-bold text-white mb-1">{metric.value}</span>
-              <span className="text-sm text-slate-400 uppercase tracking-wider text-center">{metric.label}</span>
+              <span className="text-2xl md:text-3xl font-bold text-white mb-1">{metric.value}</span>
+              <span className="text-xs md:text-sm text-slate-400 uppercase tracking-wider text-center">{metric.label}</span>
             </div>
           ))}
         </motion.div>
