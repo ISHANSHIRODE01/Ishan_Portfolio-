@@ -1,7 +1,7 @@
 export const SITE_CONFIG = {
   name: "Ishan Shirode Portfolio",
-  description: "AI & Machine Learning Engineer specializing in Generative AI, NLP, and LLMs",
-  url: "https://ishanshirode.dev",
+  description: "Entry-Level AI/ML Engineer | Python Backend & GenAI",
+  url: "https://ishan-portfolio-two-psi.vercel.app",
   author: {
     name: "Ishan Shirode",
     email: "ishanshirode7679@gmail.com",

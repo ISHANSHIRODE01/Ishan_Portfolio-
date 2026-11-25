@@ -10,11 +10,8 @@ const Experience = () => {
 
       <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
         {workExperience.map((card) => (
-          <a
+          <div
             key={card.id}
-            href={card.link}
-            target="_blank"
-            rel="noopener noreferrer"
             className={`${card.className} h-full w-full`}
           >
             <div
@@ -32,7 +29,7 @@ const Experience = () => {
                 </div>
               </div>
             </div>
-          </a>
+          </div>
         ))}
       </div>
     </div>

@@ -23,9 +23,9 @@ const AboutMe = () => {
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-neon-blue/5 rounded-full blur-3xl -z-10" />
           
           <p className="text-xl md:text-2xl text-slate-300 leading-relaxed font-light">
-            I specialize in building <span className="font-semibold text-white">production-grade AI systems</span> using RAG, FastAPI, MLOps, and LLM orchestration. 
+            Entry-level AI Engineer (B.E. in Artificial Intelligence &amp; Machine Learning, 2026) with hands-on internship experience in <span className="font-semibold text-white">Python backend services</span>, <span className="text-neon-blue">RAG pipelines</span>, and <span className="text-neon-purple">AI voice agents</span>.
             <br className="hidden md:block" /><br className="hidden md:block" />
-            My focus is moving AI solutions <span className="text-neon-purple">beyond notebooks</span> and into scalable, deployable systems that drive real business value.
+            I enjoy testing and hardening AI-assisted systems so they hold up reliably in production.
           </p>
         </motion.div>
       </div>

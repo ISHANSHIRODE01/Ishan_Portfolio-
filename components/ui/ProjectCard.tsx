@@ -65,7 +65,7 @@ export const ProjectCard = ({
 
           {/* Metrics Section - High Impact */}
           {metrics && metrics.length > 0 && (
-            <div className="grid grid-cols-3 gap-3 mb-6">
+            <div className={`grid ${metrics.length === 2 ? 'grid-cols-2' : 'grid-cols-3'} gap-3 mb-6`}>
               {metrics.slice(0, 3).map((metric, idx) => (
                 <div key={idx} className="flex flex-col items-center justify-center rounded-xl bg-white/5 p-3 border border-white/10 group-hover:border-neon-blue/30 transition-colors">
                   <span className="text-xs text-slate-400 font-medium uppercase tracking-wider mb-1">
@@ -79,14 +79,14 @@ export const ProjectCard = ({
             </div>
           )}
 
-          <p className="mb-6 text-sm font-normal text-slate-400 line-clamp-2 italic">
+          <p className="mb-6 text-sm font-normal text-slate-400 line-clamp-3 italic">
             {des}
           </p>
 
           {/* Tech Stack & Actions Footer */}
           <div className="mt-auto pt-4 border-t border-white/10">
-            <div className="flex items-center justify-between mb-6">
-              <div className="flex -space-x-2">
+            <div className="flex items-start justify-between gap-3 mb-6">
+              <div className="flex flex-wrap gap-1.5">
                 {iconLists.map((tech, index) => (
                   <div
                     key={index}

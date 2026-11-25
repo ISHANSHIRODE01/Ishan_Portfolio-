@@ -10,7 +10,7 @@ const Footer = () => {
     >
       <div className="flex flex-col items-center relative z-10">
         <h1 className="heading lg:max-w-[50vw]">
-          Open to <span className="text-neon-blue">AI Engineer</span>, <span className="text-neon-purple">ML Engineer</span> and Backend Roles
+          Open to <span className="text-neon-blue">AI Engineer</span>, <span className="text-neon-purple">ML Engineer</span> and Backend roles
         </h1>
         <p className="text-slate-400 md:mt-10 my-5 text-center max-w-lg text-lg">
           Available for full-time opportunities starting <span className="text-white font-bold">2026</span>.

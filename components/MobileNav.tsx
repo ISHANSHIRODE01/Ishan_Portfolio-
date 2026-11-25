@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { navItems } from '@/data';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,8 +41,28 @@ const MobileNav = () => {
               ))}
 
               <div className="pt-6 flex flex-col items-center gap-4 border-t border-white/10 w-48">
+                <div className="flex items-center gap-4">
+                  <a
+                    href="https://github.com/ISHANSHIRODE01"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub Profile"
+                    className="p-3 rounded-full border border-white/20 bg-black-200 text-slate-300 hover:text-white transition-all"
+                  >
+                    <FaGithub size={20} />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/ishan-shirode-556534375/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn Profile"
+                    className="p-3 rounded-full border border-white/20 bg-black-200 text-slate-300 hover:text-white transition-all"
+                  >
+                    <FaLinkedin size={20} />
+                  </a>
+                </div>
                 <a
-                  href="https://drive.google.com/file/d/1QUz_lPNTzgMJFgmoKDnjvVY1DLW0n0BR/view?usp=sharing"
+                  href="/Ishan_Shirode_Resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setIsOpen(false)}

@@ -3,24 +3,20 @@ import { SkillBadge } from "./ui/SkillBadge";
 
 const skillsData = [
     {
-        category: "Artificial Intelligence",
-        skills: ["Machine Learning", "Natural Language Processing (NLP)", "Large Language Models (LLMs)", "Generative AI", "Transformers", "RAG Architectures", "Prompt Engineering"],
+        category: "Languages & Backend",
+        skills: ["Python", "FastAPI", "Flask", "REST APIs", "SQLite", "MongoDB", "Git/GitHub"],
     },
     {
-        category: "Expertise & Tools",
-        skills: ["Computer Vision (YOLOv8)", "OpenCV", "OpenAI Whisper", "HuggingFace", "LangChain", "TensorFlow", "Scikit-Learn"],
+        category: "Applied AI",
+        skills: ["LLM APIs (Gemini, Groq/Llama 3.1)", "Prompt Engineering", "RAG", "LangChain", "FAISS", "BM25", "Sentence Transformers", "Voice-Agent Design"],
     },
     {
-        category: "MLOps & Engineering",
-        skills: ["FastAPI", "Docker", "AWS Cloud (EC2/S3)", "MLOps Pipelines", "GitHub Actions", "Linux", "Postman"],
+        category: "Testing",
+        skills: ["pytest", "API and endpoint testing", "CSV test batches"],
     },
     {
-        category: "Data & Programming",
-        skills: ["Python", "C++", "SQL", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Business Analytics"],
-    },
-    {
-        category: "Professional Skills",
-        skills: ["Problem Solving", "System Design", "Technical Leadership", "Agile Methodology"],
+        category: "Familiar",
+        skills: ["React", "Next.js", "SQLAlchemy", "JWT", "Redis", "Docker", "PostgreSQL", "TensorFlow"],
     },
 ];
 
@@ -30,7 +26,7 @@ const Skills = () => {
             <h1 className="heading mb-10">
                 My <span className="text-purple">Skills</span>
             </h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto px-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto px-10">
                 {skillsData.map((section, idx) => (
                     <div
                         key={idx}

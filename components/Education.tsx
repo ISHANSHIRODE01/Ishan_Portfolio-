@@ -5,8 +5,9 @@ const education = [
     {
         id: 1,
         title: "B.E. — Artificial Intelligence & Machine Learning",
-        institution: "Universal College of Engineering, Mumbai",
+        institution: "Universal College of Engineering, Mumbai University",
         duration: "2022 – 2026",
+        cgpa: "CGPA: 6.84/10",
         desc: "Honors: Cybersecurity",
     },
 ];
@@ -41,6 +42,9 @@ const Education = () => {
                                 </p>
                                 <p className="text-start text-white-100 mt-1 font-light">
                                     {card.duration}
+                                </p>
+                                <p className="text-start text-white-100 mt-1 font-medium">
+                                    {card.cgpa}
                                 </p>
                                 <p className="text-start text-white-100 mt-1 font-light">
                                     {card.desc}

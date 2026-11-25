@@ -95,7 +95,7 @@ export interface WorkExperience {
   desc: string;
   className: string;
   thumbnail: string;
-  link: string;
+  link?: string;
 }
 
 export interface SocialMedia {

@@ -7,15 +7,15 @@ import { ThemeProvider } from "./provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ishan Shirode | AI Systems Engineer",
-  description: "AI Systems Engineer architecting scalable ML backends, high-speed RAG pipelines, and production inference APIs.",
-  keywords: "AI Systems Engineer, MLOps, Machine Learning, FastAPI, Docker, PyTorch, RAG, LangChain, Portfolio",
+  title: "Ishan Shirode | Entry-Level AI/ML Engineer | Python Backend & GenAI",
+  description: "Entry-Level AI/ML Engineer | Python Backend & GenAI. B.E. 2026 graduate building Python backends, RAG pipelines and AI voice agents.",
+  keywords: "Entry-Level AI/ML Engineer, Python Backend, GenAI, FastAPI, RAG, LangChain, FAISS, BM25, pytest, Portfolio",
   authors: [{ name: "Ishan Shirode" }],
   creator: "Ishan Shirode",
   openGraph: {
-    title: "Ishan Shirode | AI Systems Engineer",
-    description: "Architecting scalable ML backends and RAG pipelines",
-    url: "https://ishanshirode.dev",
+    title: "Ishan Shirode | Entry-Level AI/ML Engineer | Python Backend & GenAI",
+    description: "Entry-Level AI/ML Engineer | Python Backend & GenAI. Building Python backends, RAG pipelines and AI voice agents.",
+    url: "https://ishan-portfolio-two-psi.vercel.app",
     siteName: "Ishan Shirode Portfolio",
     locale: "en_US",
     type: "website",
@@ -24,14 +24,14 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Ishan Shirode - AI/ML Engineer Portfolio",
+        alt: "Ishan Shirode - Entry-Level AI/ML Engineer | Python Backend & GenAI",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ishan Shirode - AI/ML Engineer",
-    description: "Building intelligent systems that understand, reason, and create",
+    title: "Ishan Shirode | Entry-Level AI/ML Engineer | Python Backend & GenAI",
+    description: "Entry-Level AI/ML Engineer | Python Backend & GenAI. Building Python backends, RAG pipelines and AI voice agents.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -56,14 +56,14 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               "name": "Ishan Shirode",
-              "jobTitle": "AI Systems Engineer",
-              "description": "AI Systems Engineer architecting scalable ML backends and RAG pipelines",
-              "url": "https://ishanshirode.dev",
+              "jobTitle": "Entry-Level AI/ML Engineer | Python Backend & GenAI",
+              "description": "Entry-Level AI/ML Engineer | Python Backend & GenAI building Python backends, RAG pipelines and AI voice agents.",
+              "url": "https://ishan-portfolio-two-psi.vercel.app",
               "sameAs": [
                 "https://github.com/ISHANSHIRODE01",
                 "https://www.linkedin.com/in/ishan-shirode-556534375/"
               ],
-              "knowsAbout": ["Artificial Intelligence", "Machine Learning", "Natural Language Processing", "Computer Vision", "Deep Learning"]
+              "knowsAbout": ["Artificial Intelligence", "Machine Learning", "Python", "FastAPI", "RAG", "LangChain", "AI Voice Agents"]
             })
           }}
         />

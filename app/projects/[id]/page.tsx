@@ -146,18 +146,20 @@ export default function ProjectCaseStudy({ params }: { params: { id: string } })
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                 <div>
-                    <h3 className="text-xl font-bold text-white mb-4">Results & Metrics</h3>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      {caseStudy.results.map((res, i) => (
-                        <div key={i} className="p-4 rounded-xl bg-black-200 border border-white/5">
-                          <div className="text-2xl font-bold text-neon-purple mb-1">{res.value}</div>
-                          <div className="text-xs text-slate-400 uppercase tracking-wider mb-2">{res.metric}</div>
-                          <div className="text-xs text-slate-500">{res.context}</div>
-                        </div>
-                      ))}
-                    </div>
-                 </div>
+                 {caseStudy.results.length > 0 && (
+                   <div>
+                      <h3 className="text-xl font-bold text-white mb-4">Results &amp; Metrics</h3>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {caseStudy.results.map((res, i) => (
+                          <div key={i} className="p-4 rounded-xl bg-black-200 border border-white/5">
+                            <div className="text-2xl font-bold text-neon-purple mb-1">{res.value}</div>
+                            <div className="text-xs text-slate-400 uppercase tracking-wider mb-2">{res.metric}</div>
+                            <div className="text-xs text-slate-500">{res.context}</div>
+                          </div>
+                        ))}
+                      </div>
+                   </div>
+                 )}
                  <div>
                     <h3 className="text-xl font-bold text-white mb-4">Lessons Learned</h3>
                     <ul className="list-disc pl-5 space-y-3 text-slate-300">

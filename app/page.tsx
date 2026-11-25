@@ -13,10 +13,8 @@ import Leadership from "@/components/Leadership";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import ModernHero from "@/components/ModernHero";
 import ModernProjects from "@/components/ModernProjects";
-import SystemsArchitecture from "@/components/SystemsArchitecture";
 import NeuralBackground from "@/components/ui/NeuralBackground";
 import AboutMe from "@/components/AboutMe";
-import GitHubActivity from "@/components/GitHubActivity";
 
 const Home = () => {
   return (
@@ -37,9 +35,7 @@ const Home = () => {
           <div id="experience">
             <Experience />
           </div>
-          <GitHubActivity />
           <ModernProjects />
-          <SystemsArchitecture />
           <Education />
           <Certificates />
           <Leadership />

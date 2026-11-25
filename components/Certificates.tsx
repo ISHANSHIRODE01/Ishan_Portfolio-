@@ -2,20 +2,20 @@ import React from "react";
 
 const certifications = [
     {
-        name: "AWS Academy Graduate — Cloud Architecting",
+        name: "AWS Academy Cloud Architecting",
         link: "https://drive.google.com/file/d/14gSOqSQfMAplvRGQQqG50nJs3u6PgOyi/view?usp=drive_link",
     },
     {
-        name: "Accenture Technology Apprenticeship — Forage",
-        link: "https://drive.google.com/file/d/1zLsJwZsWYYpa4X-gzk4OUFt3Bt_LuoCQ/view?usp=sharing",
-    },
-    {
-        name: "Tata GenAI Powered Data Analytics — Forage",
+        name: "Tata GenAI Powered Data Analytics",
         link: "https://drive.google.com/file/d/18tno60SEOms2kFCTKH6RTe_6uJbOotdA/view?usp=drive_link",
     },
     {
-        name: "Deloitte Data Analytics Virtual Experience — Forage",
+        name: "Deloitte Data Analytics",
         link: "https://drive.google.com/file/d/1t4mBgwP8BFtlBoc6ptn8jMxoUQKpD1ha/view?usp=drive_link",
+    },
+    {
+        name: "Accenture UK Technology Apprenticeship",
+        link: "https://drive.google.com/file/d/1zLsJwZsWYYpa4X-gzk4OUFt3Bt_LuoCQ/view?usp=sharing",
     },
 ];
 

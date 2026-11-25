@@ -8,6 +8,7 @@ import {
   useMotionValueEvent,
 } from "framer-motion";
 import Link from "next/link";
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { cn } from "@/lib/utils";
 
 export const FloatingNav = ({
@@ -87,8 +88,26 @@ export const FloatingNav = ({
           </Link>
         ))}
         <div className="flex items-center gap-2 shrink-0">
+          <a
+            href="https://github.com/ISHANSHIRODE01"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub Profile"
+            className="p-2 rounded-full border border-white/10 bg-black-200 text-slate-300 hover:text-white hover:border-neon-blue/50 transition-all"
+          >
+            <FaGithub size={16} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/ishan-shirode-556534375/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn Profile"
+            className="p-2 rounded-full border border-white/10 bg-black-200 text-slate-300 hover:text-white hover:border-neon-blue/50 transition-all"
+          >
+            <FaLinkedin size={16} />
+          </a>
           <a 
-            href="https://drive.google.com/file/d/1QUz_lPNTzgMJFgmoKDnjvVY1DLW0n0BR/view?usp=sharing" 
+            href="/Ishan_Shirode_Resume.pdf" 
             target="_blank"
             rel="noopener noreferrer"
             className="border text-sm font-medium relative border-white/20 bg-black-200 text-slate-300 px-4 py-2 rounded-full hover:text-white transition-all hidden md:block"

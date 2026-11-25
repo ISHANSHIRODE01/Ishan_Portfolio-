@@ -11,8 +11,8 @@ export const navItems: NavItem[] = [
 export const gridItems: GridItem[] = [
   {
     id: 1,
-    title: "Engineering ML pipelines from data ingestion to containerized deployment.",
-    description: "AI Systems Engineer",
+    title: "Building Python backends, RAG pipelines, and AI voice agents.",
+    description: "Entry-Level AI/ML Engineer",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
@@ -21,8 +21,8 @@ export const gridItems: GridItem[] = [
   },
   {
     id: 2,
-    title: "Available for full-time AI/SWE roles globally",
-    description: "Global Engineering Mindset",
+    title: "Open to full-time AI/ML and Python backend roles",
+    description: "Availability",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-start",
@@ -32,7 +32,7 @@ export const gridItems: GridItem[] = [
   {
     id: 3,
     title: "My Tech Stack",
-    description: "Python, FastAPI, Docker, PyTorch, LangChain, FAISS",
+    description: "Python, FastAPI, LangChain, FAISS, BM25, pytest",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
     titleClassName: "justify-center",
@@ -41,8 +41,8 @@ export const gridItems: GridItem[] = [
   },
   {
     id: 4,
-    title: "Productionizing ML pipelines with Docker, FastAPI, and Airflow.",
-    description: "Infrastructure Focus",
+    title: "Building Python backends with FastAPI and REST APIs.",
+    description: "Backend Focus",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-start",
@@ -51,7 +51,7 @@ export const gridItems: GridItem[] = [
   },
   {
     id: 5,
-    title: "Orchestrating multi-agent LLM consensus and FAISS vector retrieval.",
+    title: "Testing and hardening AI-built systems, and improving AI voice agents.",
     description: "Current Technical Focus",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -61,8 +61,8 @@ export const gridItems: GridItem[] = [
   },
   {
     id: 6,
-    title: "Bridging ML research with highly scalable backend engineering.",
-    description: "Engineering Philosophy",
+    title: "Let's connect for AI/ML and Python backend roles.",
+    description: "Get in Touch",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
     titleClassName: "justify-center md:max-w-full max-w-60 text-center",
@@ -73,304 +73,238 @@ export const gridItems: GridItem[] = [
 
 const rawProjects: Project[] = [
   {
-    "id": 1,
-    "title": "AI-Powered Portfolio Platform",
-    "des": "A full-stack RAG and Agentic LLM platform that transforms raw developer data into a recruiter-ready experience.",
-    "img": "/council_llm_system.png",
-    "iconLists": [
-      "Next.js",
-      "FastAPI",
-      "Gemini",
-      "FAISS"
+    id: 1,
+    title: "AI Knowledge Assistant (RAG)",
+    des: "Built a hybrid-retrieval pipeline (FAISS + BM25 + Sentence Transformers) over 5,000+ research documents, with cross-encoder re-ranking behind a FastAPI service to reduce hallucinations and improve answer relevance.",
+    img: "/rag_architecture_system.png",
+    iconLists: ["FastAPI", "LangChain", "FAISS", "BM25"],
+    link: "https://github.com/ISHANSHIRODE01/AI-Knowledge-Assistant-RAG-System-",
+    githubLink: "https://github.com/ISHANSHIRODE01/AI-Knowledge-Assistant-RAG-System-",
+    metrics: [
+      { label: "Documents", value: "5,000+" },
+      { label: "Retrieval", value: "Hybrid search" },
     ],
-    "link": "https://github.com/ISHANSHIRODE01/AI-powered-portfolio-platform",
-    "githubLink": "https://github.com/ISHANSHIRODE01/AI-powered-portfolio-platform",
-    "metrics": [
-      {
-        "label": "Latency",
-        "value": "<1s"
+    caseStudy: {
+      overview: {
+        summary: "Built a hybrid-retrieval pipeline (FAISS + BM25 + Sentence Transformers) over 5,000+ research documents, with cross-encoder re-ranking behind a FastAPI service to reduce hallucinations and improve answer relevance.",
+        problem: "Base LLMs can hallucinate when answering questions over dense research documents not present in their training data.",
+        businessContext: "Large research document collections are hard to search manually without missing relevant context.",
+        technicalContext: "Combined dense vector retrieval (FAISS + Sentence Transformers) with sparse keyword retrieval (BM25) and cross-encoder re-ranking behind a FastAPI service.",
       },
-      {
-        "label": "Vector DB",
-        "value": "FAISS"
-      }
-    ],
-    "caseStudy": {
-      "overview": {
-        "summary": "An end-to-end full-stack application leveraging Retrieval-Augmented Generation (RAG) and Agentic AI to bridge the gap between code repositories and recruiter-friendly portfolios.",
-        "problem": "Developers struggle to communicate their true technical value. Standard portfolios are static, require manual updating, and often lack context for non-technical recruiters.",
-        "businessContext": "Recruiters spend less than 10 seconds reviewing a portfolio. Providing an AI chatbot and ATS-optimized bullet points increases interview conversion rates exponentially.",
-        "technicalContext": "The system ingests GitHub repo data, vectorizes it, and serves it via an LLM to answer user queries with extremely low latency."
-      },
-      "architecture": {
-        "visualPipeline": "GitHub \u2192 Analyzer \u2192 Gemini \u2192 RAG Engine \u2192 Portfolio \u2192 Recruiter Chatbot",
-        "componentBreakdown": [
-          "Client Layer: Next.js 15 for the dashboard and RAG chat interface.",
-          "Service Orchestrator: FastAPI backend handling JWT auth and GitHub parsing.",
-          "Intelligence Layer: FAISS Vector Store and Sentence-Transformers for semantic retrieval.",
-          "LLM Engine: Gemini Pro for text enhancement and Llama 3.1 for RAG querying."
+      architecture: {
+        visualPipeline: "Research Documents → Sentence Transformers → FAISS + BM25 → Cross-Encoder Re-Ranking → FastAPI",
+        componentBreakdown: [
+          "Retrieval Layer: Hybrid retrieval using FAISS, BM25, and Sentence Transformers over 5,000+ research documents.",
+          "Re-Ranking Layer: Cross-encoder re-ranking to improve answer relevance and reduce hallucinations.",
+          "API Layer: FastAPI service orchestrated with LangChain.",
         ],
-        "dataFlow": [
-          "GitHub Parser extracts READMEs and repo metrics.",
-          "Sentence-Transformers chunk and vectorize data into FAISS.",
-          "User queries the chatbot; backend retrieves top-k vectors.",
-          "Llama 3.1 synthesizes context and streams the response via SSE."
+        dataFlow: [
+          "5,000+ research documents are indexed into FAISS and BM25.",
+          "User queries retrieve candidate chunks from both FAISS and BM25.",
+          "A cross-encoder re-ranks the retrieved candidates before passing context to the FastAPI response pipeline.",
         ],
-        "infrastructure": {
-          "models": "Gemini Pro, Llama 3.1 (via Groq), Sentence-Transformers",
-          "databases": "PostgreSQL, FAISS Vector Store, Redis",
-          "caching": "Upstash Redis",
-          "apis": "GitHub API, Groq Inference API"
-        }
+        infrastructure: {
+          models: "Sentence Transformers, Cross-Encoder",
+          databases: "FAISS",
+          caching: "None",
+          apis: "FastAPI",
+        },
       },
-      "challenges": [
-        "LLM Hallucinations: Initial versions of the chatbot invented features the developer hadn't actually built.",
-        "Latency: Vector search and LLM generation were too slow for a real-time web interface.",
-        "Data Synchronization: Keeping the vector store updated when underlying GitHub repos changed."
+      challenges: [
+        "Balancing semantic recall with exact keyword matching across 5,000+ research documents.",
+        "Reducing hallucinations by filtering out low-relevance retrieved chunks before generation.",
       ],
-      "technicalDecisions": [
+      technicalDecisions: [
         {
-          "decision": "Using FAISS over Pinecone",
-          "rationale": "FAISS offered sub-millisecond local retrieval which was critical for minimizing the total round-trip time of the RAG pipeline without network overhead."
+          decision: "Hybrid Search (FAISS + BM25)",
+          rationale: "Combining dense retrieval (FAISS + Sentence Transformers) with sparse keyword retrieval (BM25) captures both semantic meaning and exact terms.",
         },
         {
-          "decision": "FastAPI over Express.js",
-          "rationale": "FastAPI provided native async support and seamless integration with Python-based ML libraries (Sentence-Transformers, LangChain)."
-        }
+          decision: "Cross-Encoder Re-Ranking",
+          rationale: "Re-ranking retrieved candidates improves answer relevance and reduces hallucinations.",
+        },
       ],
-      "implementation": {
-        "backend": "Python, FastAPI, JWT Authentication, SQLAlchemy.",
-        "frontend": "Next.js 15 App Router, Tailwind CSS, Framer Motion for UI.",
-        "infrastructure": "Dockerized microservices deployed via CI/CD pipelines.",
-        "aiPipeline": "LangChain orchestrates the RAG chain; Groq provides ultra-fast Llama 3 inference."
+      implementation: {
+        backend: "Python, FastAPI",
+        frontend: "N/A",
+        infrastructure: "FastAPI service",
+        aiPipeline: "LangChain, FAISS, BM25, Sentence Transformers, Cross-Encoder re-ranking",
       },
-      "results": [
+      results: [
         {
-          "metric": "Inference Speed",
-          "value": "300 Tok/s",
-          "context": "Achieved via Groq API integration."
+          metric: "Corpus Size",
+          value: "5,000+",
+          context: "Research documents indexed in the hybrid pipeline.",
         },
         {
-          "metric": "Retrieval Accuracy",
-          "value": "Top-3 Hits",
-          "context": "Semantic accuracy for complex GitHub docs."
-        }
+          metric: "Retrieval",
+          value: "Hybrid",
+          context: "FAISS + BM25 with cross-encoder re-ranking.",
+        },
       ],
-      "lessonsLearned": [
-        "Streaming responses (Server-Sent Events) are mandatory for AI UX; waiting for a block response severely degrades perceived latency.",
-        "Data quality dictates RAG quality; poorly structured READMEs result in poor chat responses."
+      lessonsLearned: [
+        "Hybrid retrieval (FAISS + BM25) handles technical terminology better than dense vector search alone.",
+        "Cross-encoder re-ranking improves answer relevance and helps reduce hallucinations.",
       ],
-      "futureImprovements": [
-        "Implement a web scraper to automatically ingest LinkedIn profiles and Medium articles.",
-        "Migrate to a hybrid search (Dense + Sparse) to capture exact technical keyword matches."
-      ],
-      "recruiterTakeaways": {
-        "aiEngineer": "Demonstrates full-stack RAG deployment, LLM orchestration, and vector DB management.",
-        "mlEngineer": "Shows practical understanding of embedding models and retrieval architectures.",
-        "startupFounder": "Built a complete, monetizable SaaS product from scratch with auth and a database.",
-        "softwareEngineer": "Clean microservice separation between a Next.js client and FastAPI Python backend."
-      }
-    }
+      futureImprovements: [],
+      recruiterTakeaways: {
+        aiEngineer: "Demonstrates hybrid RAG retrieval (FAISS + BM25 + Sentence Transformers) with cross-encoder re-ranking.",
+        mlEngineer: "Applies dense/sparse retrieval and cross-encoder re-ranking to reduce hallucinations.",
+        startupFounder: "Addresses document search and hallucination reduction over 5,000+ research documents.",
+        softwareEngineer: "Exposes the retrieval and re-ranking pipeline behind a FastAPI service.",
+      },
+    },
   },
   {
-    "id": 2,
-    "title": "AI Knowledge Assistant (RAG Engine)",
-    "des": "A production-grade Retrieval-Augmented Generation engine executing hybrid search across academic corpuses.",
-    "img": "/rag_architecture_system.png",
-    "iconLists": [
-      "FastAPI",
-      "FAISS",
-      "LangChain",
-      "Docker"
+    id: 2,
+    title: "DriftGuard-ML",
+    des: "Built an ML monitoring platform with drift detection (KS-Test, Chi-Square) and an automated champion-challenger retraining pipeline, reducing MAE by 26% and improving R2 by 16%.",
+    img: "/mlops_driftguard_system.png",
+    iconLists: ["Python", "MongoDB", "MLOps"],
+    link: "https://github.com/ISHANSHIRODE01/DriftGuard-ML",
+    githubLink: "https://github.com/ISHANSHIRODE01/DriftGuard-ML",
+    metrics: [
+      { label: "MAE", value: "-26%" },
+      { label: "R2", value: "+16%" },
     ],
-    "link": "https://github.com/ISHANSHIRODE01/AI-Knowledge-Assistant-RAG-System-",
-    "githubLink": "https://github.com/ISHANSHIRODE01/AI-Knowledge-Assistant-RAG-System-",
-    "metrics": [
-      {
-        "label": "Latency",
-        "value": "<1s"
+    caseStudy: {
+      overview: {
+        summary: "Built an ML monitoring platform with drift detection (KS-Test, Chi-Square) and an automated champion-challenger retraining pipeline, reducing MAE by 26% and improving R2 by 16%.",
+        problem: "ML models in production degrade over time as incoming data distributions shift.",
+        businessContext: "Automated drift monitoring and retraining help maintain model accuracy without manual intervention.",
+        technicalContext: "Implemented KS-Test and Chi-Square drift detection alongside an automated champion-challenger retraining pipeline backed by MongoDB.",
       },
-      {
-        "label": "Vector DB",
-        "value": "FAISS"
-      }
-    ],
-    "caseStudy": {
-      "overview": {
-        "summary": "An advanced, production-ready RAG system built to solve the contextual limitations of base LLMs by dynamically indexing complex research papers.",
-        "problem": "Standard LLMs hallucinate when asked about proprietary or dense academic literature not present in their training data.",
-        "businessContext": "Enterprise knowledge bases are massive and unstructured. Precise retrieval saves thousands of hours of manual document review.",
-        "technicalContext": "Required a sophisticated hybrid search (Dense + Sparse) coupled with a neural cross-encoder reranker to handle massive document ingestion."
-      },
-      "architecture": {
-        "visualPipeline": "PDF \u2192 Chunking \u2192 Embeddings \u2192 FAISS \u2192 BM25 \u2192 Cross Encoder \u2192 Llama 3 \u2192 Streaming Response",
-        "componentBreakdown": [
-          "Ingestion Pipeline: Document loaders and text splitters for PDFs and arXiv API.",
-          "Retrieval Engine: FAISS (dense) and BM25 (sparse) running in parallel.",
-          "Re-Ranking Phase: HuggingFace ms-marco-TinyBERT Cross-Encoder.",
-          "Generation Engine: FastAPI backend streaming Server-Sent Events from Groq Llama 3."
+      architecture: {
+        visualPipeline: "Data → Drift Detection (KS-Test, Chi-Square) → Champion-Challenger Retraining → Updated Model",
+        componentBreakdown: [
+          "Monitoring Layer: Statistical drift detection using KS-Test and Chi-Square.",
+          "Storage Layer: MongoDB for storing monitoring and pipeline data.",
+          "Retraining Pipeline: Automated champion-challenger evaluation and retraining workflow.",
         ],
-        "dataFlow": [
-          "Raw documents are ingested, chunked, and embedded.",
-          "User query hits both FAISS and BM25 indices.",
-          "Candidate chunks are scored and resorted by the Cross-Encoder.",
-          "Top-K chunks are injected into the LLM prompt and streamed to the UI."
+        dataFlow: [
+          "Incoming data is evaluated for drift using KS-Test and Chi-Square.",
+          "Detected drift triggers the automated champion-challenger retraining pipeline.",
+          "Challenger models are evaluated against the current champion before promotion.",
         ],
-        "infrastructure": {
-          "models": "Llama 3 (8B), Sentence-Transformers, ms-marco-TinyBERT",
-          "databases": "FAISS, Local File System",
-          "caching": "In-memory LRU Cache",
-          "apis": "arXiv API, Groq API"
-        }
+        infrastructure: {
+          models: "Champion-Challenger ML models",
+          databases: "MongoDB",
+          caching: "None",
+          apis: "Python MLOps pipeline",
+        },
       },
-      "challenges": [
-        "Keyword Loss: Pure vector search (FAISS) consistently failed to retrieve documents when the user queried for exact acronyms or specific part numbers.",
-        "Context Window limits: Stuffing too many retrieved chunks into the LLM caused performance degradation and API limits.",
-        "PDF Parsing: Extracting clean text from multi-column academic PDFs with math equations."
+      challenges: [
+        "Detecting distribution shifts reliably across numerical and categorical features.",
+        "Automating retraining while ensuring challenger models outperform the existing champion.",
       ],
-      "technicalDecisions": [
+      technicalDecisions: [
         {
-          "decision": "Implementing Hybrid Search (BM25 + FAISS)",
-          "rationale": "FAISS excels at semantic meaning, while BM25 guarantees that exact technical keywords and acronyms are never missed."
+          decision: "KS-Test & Chi-Square Drift Detection",
+          rationale: "Provides statistical drift checks for both continuous and categorical features.",
         },
         {
-          "decision": "Adding a Cross-Encoder Re-Ranker",
-          "rationale": "Retrieving 20 chunks from hybrid search and re-ranking them neutrally proved far more accurate than just taking the top 5 from vector search directly."
-        }
+          decision: "Champion-Challenger Retraining",
+          rationale: "Compares newly trained challenger models against the current champion before promotion.",
+        },
       ],
-      "implementation": {
-        "backend": "FastAPI async endpoints, Python.",
-        "frontend": "React UI with real-time markdown rendering and math support.",
-        "infrastructure": "Dockerized containerization for the entire stack.",
-        "aiPipeline": "Custom LangChain components overriding default retrieval behavior to support BM25."
+      implementation: {
+        backend: "Python, MongoDB",
+        frontend: "N/A",
+        infrastructure: "Automated MLOps retraining pipeline",
+        aiPipeline: "KS-Test, Chi-Square drift detection, and champion-challenger retraining",
       },
-      "results": [
+      results: [
         {
-          "metric": "Hallucinations",
-          "value": "0%",
-          "context": "In verifiable closed-book queries."
+          metric: "MAE",
+          value: "-26%",
+          context: "Reduction in Mean Absolute Error after automated retraining.",
         },
         {
-          "metric": "Retrieval Precision",
-          "value": "92%",
-          "context": "Top-K after Cross-Encoder re-ranking."
-        }
+          metric: "R2",
+          value: "+16%",
+          context: "Improvement in R2 score from the champion-challenger pipeline.",
+        },
       ],
-      "lessonsLearned": [
-        "Vector databases alone are insufficient for production RAG. Hybrid search is mandatory.",
-        "Cross-encoders add ~200ms latency but double retrieval accuracy; it's a necessary tradeoff."
+      lessonsLearned: [
+        "Combining statistical drift detection with champion-challenger evaluation helps prevent model regressions.",
       ],
-      "futureImprovements": [
-        "Implement GraphRAG using Neo4j to understand entity relationships across documents.",
-        "Add multi-modal capabilities to ingest and query images/charts inside PDFs."
-      ],
-      "recruiterTakeaways": {
-        "aiEngineer": "Understands advanced RAG concepts (Hybrid Search, Re-Ranking, Chunking Strategies) beyond basic tutorials.",
-        "mlEngineer": "Familiar with deploying and running HuggingFace Cross-Encoders locally.",
-        "startupFounder": "Built a highly performant, production-ready enterprise knowledge tool.",
-        "softwareEngineer": "Solid architectural boundaries between ingestion, retrieval, and generation."
-      }
-    }
+      futureImprovements: [],
+      recruiterTakeaways: {
+        aiEngineer: "Shows end-to-end ML monitoring and automated retraining workflows.",
+        mlEngineer: "Applies KS-Test, Chi-Square drift detection, and champion-challenger evaluation (MAE -26%, R2 +16%).",
+        startupFounder: "Automates model monitoring and retraining to maintain model performance.",
+        softwareEngineer: "Integrates Python pipelines with MongoDB for structured MLOps tracking.",
+      },
+    },
   },
   {
-    "id": 3,
-    "title": "DriftGuard-ML",
-    "des": "A closed-loop MLOps pipeline featuring automated drift detection, alerting, and Champion-Challenger retraining.",
-    "img": "/mlops_driftguard_system.png",
-    "iconLists": [
-      "Celery",
-      "Prometheus",
-      "FastAPI"
-    ],
-    "link": "https://github.com/ISHANSHIRODE01/DriftGuard-ML",
-    "githubLink": "https://github.com/ISHANSHIRODE01/DriftGuard-ML",
-    "metrics": [
-      {
-        "label": "Drift Reduced",
-        "value": "40%"
+    id: 3,
+    title: "AI-Powered Portfolio Platform",
+    des: "Full-stack app that analyses GitHub repositories, with a RAG chatbot, JWT authentication and Redis caching; deployed on Vercel and Railway.",
+    img: "/council_llm_system.png",
+    iconLists: ["Next.js", "FastAPI", "LangChain", "FAISS", "Gemini", "Groq (Llama 3.1)"],
+    link: "https://github.com/ISHANSHIRODE01/AI-powered-portfolio-platform",
+    githubLink: "https://github.com/ISHANSHIRODE01/AI-powered-portfolio-platform",
+    metrics: [],
+    caseStudy: {
+      overview: {
+        summary: "Full-stack app that analyses GitHub repositories, with a RAG chatbot, JWT authentication and Redis caching; deployed on Vercel and Railway.",
+        problem: "Developers need an interactive way to present their GitHub repositories and let visitors query project details.",
+        businessContext: "A repository analyzer paired with a RAG chatbot makes technical project history easier to explore.",
+        technicalContext: "Built with a Next.js frontend and FastAPI backend, using LangChain, FAISS, Gemini, and Groq (Llama 3.1), with JWT authentication and Redis caching.",
       },
-      {
-        "label": "Reliability",
-        "value": "99.9%"
-      }
-    ],
-    "caseStudy": {
-      "overview": {
-        "summary": "An end-to-end MLOps system providing automated statistical drift detection, real-time monitoring, and a Champion-Challenger retraining pipeline.",
-        "problem": "ML models in production degrade silently over time due to concept and data drift, leading to poor predictions and revenue loss.",
-        "businessContext": "Manual monitoring and retraining of ML models consumes hundreds of engineering hours per month. Automation ensures models remain highly accurate safely.",
-        "technicalContext": "Needed a robust statistical backend (KS-Tests) coupled with an observable dashboard and a safe deployment strategy (atomic model swapping)."
-      },
-      "architecture": {
-        "visualPipeline": "Production Data \u2192 Drift Detector \u2192 KS-Test \u2192 Chi-Square \u2192 Alert Engine \u2192 Retraining Pipeline \u2192 Champion/Challenger \u2192 Production Model",
-        "componentBreakdown": [
-          "Inference Layer: FastAPI serving predictions with sub-50ms latency.",
-          "Logging Layer: MongoDB Atlas capturing all features and predictions.",
-          "Monitoring Pipeline: Statistical drift detector executing batch evaluations.",
-          "Retraining Pipeline: Champion vs Challenger model versioner."
+      architecture: {
+        visualPipeline: "GitHub Repositories → FastAPI + LangChain → FAISS → Gemini & Groq (Llama 3.1) → Next.js RAG Chatbot",
+        componentBreakdown: [
+          "Frontend: Next.js application deployed on Vercel.",
+          "Backend: FastAPI service with JWT authentication and Redis caching, deployed on Railway.",
+          "AI & Retrieval Layer: LangChain, FAISS, Gemini, and Groq (Llama 3.1) powering repository analysis and the RAG chatbot.",
         ],
-        "dataFlow": [
-          "Production traffic hits the FastAPI server; predictions are logged to Mongo.",
-          "A batch job runs KS-Tests on numerical data and Chi-Square on categorical data.",
-          "If drift exceeds thresholds, the Alert Engine triggers the retraining pipeline.",
-          "The Challenger model is trained; if MAE improves by >1%, it replaces the Champion."
+        dataFlow: [
+          "GitHub repository data is analysed and indexed into FAISS.",
+          "Authenticated users (via JWT) interact with the Next.js frontend.",
+          "Queries are routed through FastAPI with Redis caching and answered by the RAG chatbot using LangChain, Gemini, and Groq (Llama 3.1).",
         ],
-        "infrastructure": {
-          "models": "Scikit-Learn Random Forests (Versioned .pkl files)",
-          "databases": "MongoDB Atlas",
-          "caching": "None",
-          "apis": "FastAPI REST Endpoints"
-        }
+        infrastructure: {
+          models: "Gemini, Groq (Llama 3.1)",
+          databases: "FAISS",
+          caching: "Redis",
+          apis: "FastAPI, GitHub repositories",
+        },
       },
-      "challenges": [
-        "Race Conditions: Updating the production model file (.pkl) while the server was processing concurrent requests caused file locking errors.",
-        "False Positives: Initial drift tests triggered retraining too often due to normal variance in small batch sizes.",
-        "Safety: Ensuring a newly trained model didn't perform worse than the degraded model."
+      challenges: [
+        "Coordinating repository analysis, vector indexing, and RAG chat across separate frontend and backend deployments.",
+        "Securing endpoints with JWT authentication and reducing repeated work with Redis caching.",
       ],
-      "technicalDecisions": [
+      technicalDecisions: [
         {
-          "decision": "Champion-Challenger Strategy",
-          "rationale": "Required the new 'Challenger' model to beat the 'Champion' model by a strict margin before atomic promotion to prevent performance thrashing."
+          decision: "Next.js + FastAPI Split",
+          rationale: "Separates the Next.js UI (deployed on Vercel) from the Python AI/RAG backend (deployed on Railway).",
         },
         {
-          "decision": "MongoDB for Log Storage",
-          "rationale": "Document databases are ideal for storing flexible, changing schemas as model feature inputs evolve over time."
-        }
-      ],
-      "implementation": {
-        "backend": "FastAPI, Python, Pydantic validation.",
-        "frontend": "Streamlit for the real-time observability dashboard.",
-        "infrastructure": "Atomic file locks for zero-downtime model updates.",
-        "aiPipeline": "Automated Scikit-Learn pipelines handling preprocessing and inference."
-      },
-      "results": [
-        {
-          "metric": "System Uptime",
-          "value": "99.9%",
-          "context": "During automated retraining phases."
+          decision: "JWT Authentication & Redis Caching",
+          rationale: "Protects user sessions with JWT and caches responses with Redis.",
         },
-        {
-          "metric": "Latency",
-          "value": "<50ms",
-          "context": "For P95 inference requests."
-        }
       ],
-      "lessonsLearned": [
-        "Atomic deployments and file-locking are critical for serving models in high-concurrency environments.",
-        "Statistical thresholds for drift (p-values) must be tuned carefully to avoid alert fatigue."
+      implementation: {
+        backend: "Python, FastAPI, JWT authentication, Redis caching",
+        frontend: "Next.js",
+        infrastructure: "Deployed on Vercel (frontend) and Railway (backend)",
+        aiPipeline: "LangChain, FAISS, Gemini, Groq (Llama 3.1)",
+      },
+      results: [],
+      lessonsLearned: [
+        "Adding Redis caching and JWT authentication alongside RAG pipelines keeps full-stack AI apps structured.",
       ],
-      "futureImprovements": [
-        "Migrate to Apache Airflow or Prefect for robust DAG orchestration.",
-        "Implement evidently.ai for out-of-the-box advanced data drift metrics."
-      ],
-      "recruiterTakeaways": {
-        "aiEngineer": "Understands the complete model lifecycle post-deployment.",
-        "mlEngineer": "Strong MLOps skills, including monitoring, alerting, and CI/CD for models.",
-        "startupFounder": "Builds resilient systems that heal themselves without manual intervention.",
-        "softwareEngineer": "Familiar with concurrency, database logging, and API design."
-      }
-    }
-  }
+      futureImprovements: [],
+      recruiterTakeaways: {
+        aiEngineer: "Demonstrates full-stack RAG chatbot integration using LangChain, FAISS, Gemini, and Groq (Llama 3.1).",
+        mlEngineer: "Applies vector retrieval with FAISS inside a deployed application.",
+        startupFounder: "End-to-end deployed full-stack product on Vercel and Railway.",
+        softwareEngineer: "Combines Next.js, FastAPI, JWT authentication, and Redis caching.",
+      },
+    },
+  },
 ];
 
 export const projects: Project[] = rawProjects;
@@ -395,19 +329,24 @@ export const companies: Company[] = [
 export const workExperience: WorkExperience[] = [
   {
     id: 1,
-    title: "AI/ML Intern — Blackhole Inverse | Oct 2025 – Present",
-    desc: "• Engineered autonomous AI systems, task review agents, and automated workflow pipelines.\n• Built modular components including agent registries and plug-in abstraction layers.\n• Delivered 15+ production-level tasks and developed event-driven HR/ERP integrations.",
+    title: "ConversAI Labs | AI Engineer Intern (Remote) | Sep 2026 – Oct 2026",
+    desc: "• Built and tuned AI voice-agent flows (YAML configuration, prompts, Hindi/English conversation design), including a university admissions assistant and an e-commerce caller agent\n• Reviewed call transcripts to find repeated-question and flow failures, fixed agent behaviour and validated runs with inbound/outbound CSV test batches\n• Contributed PRs to an agent testing platform (FastAPI backend, React frontend), including a fix that fences cancelled improvement workers against stale sessions, covered by 15 pytest tests\n• Designed and tested an MCP server for the platform, verifying its health and authentication endpoints",
     className: "md:col-span-2",
     thumbnail: "",
-    link: "https://github.com/ISHANSHIRODE01",
   },
   {
     id: 2,
-    title: "SEO Intern — Elfoxis Digital | Apr 2025 – Jun 2025",
-    desc: "• Architected automated reporting dashboards to track keyword performance and global traffic trends.\n• Executed data-driven SEO strategies that successfully optimized content ranking metrics.\n• Generated actionable analytics to drive executive decision-making and cross-functional alignment.",
+    title: "Blackhole Infiverse | Mumbai (Hybrid) | Oct 2025 – Present",
+    desc: "Jr AI Engineer (Jun 2026 – Present) | AI/ML Intern (Oct 2025 – May 2026)\n\n• Worked on a rule-based task evaluation system that routes submissions through pass/fail checks, with human review before release\n• Built event-driven integrations between HR and ERP systems using REST APIs, automating alerts and cross-system workflows\n• Used AI-assisted development to build an append-only, hash-chained event journal for tamper-evident audit trails\n• Tested and hardened an AI-built evaluation platform against a 7-phase validation suite (data integrity, concurrency, deterministic replay)\n• Delivered 15+ tasks across multiple sprints",
     className: "md:col-span-2",
     thumbnail: "",
-    link: "https://github.com/ISHANSHIRODE01",
+  },
+  {
+    id: 3,
+    title: "Elfoxis Digital | SEO Intern | Apr 2025 – Jun 2025",
+    desc: "• Built automated reporting dashboards to track keyword performance and website traffic trends\n• Executed data-driven SEO strategies to improve content ranking metrics\n• Generated analytics reports to support content and marketing decisions",
+    className: "md:col-span-4",
+    thumbnail: "",
   },
 ];
 
